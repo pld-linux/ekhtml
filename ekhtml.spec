@@ -5,6 +5,7 @@ Release:	1
 License:	BSD
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+# Source0-md5:	cc9d2e4adaccacfacefddbd75ccccfdf
 URL:		http://ekhtml.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
