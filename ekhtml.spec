@@ -1,4 +1,5 @@
-Summary:	ekhtml is a speedy html parser
+Summary:	ekhtml - a speedy HTML parser
+Summary(pl):	ekhtml - szybki analizator HTML
 Name:		ekhtml
 Version:	0.3.2
 Release:	1
@@ -10,7 +11,10 @@ URL:		http://ekhtml.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-ekhtml is a speedy, yet forgiving, SAX-stylee HTML parser.
+ekhtml is a speedy, yet forgiving, SAX-style HTML parser.
+
+%description -l pl
+ekhtml to szybki ale odpuszczaj±cy analizator HTML w stylu SAX.
 
 %package devel
 Summary:	Header files for ekhtml
@@ -25,13 +29,13 @@ Header files for ekhtml.
 Pliki nag³ówkowe do ekhtml.
 
 %package static
-Summary:	Static ekhtml libraries
+Summary:	Static ekhtml library
 Summary(pl):	Biblioteka statyczna ekhtml
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}
 
 %description static
-Static ekhtml libraries.
+Static ekhtml library.
 
 %description static -l pl
 Biblioteka statyczna ekhtml.
@@ -46,13 +50,14 @@ Biblioteka statyczna ekhtml.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
+%post	-p /sbin/ldconfig
+%postun	-p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
@@ -62,9 +67,9 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/lib*.so
+%{_libdir}/lib*.la
 %{_includedir}/*
-%{_libdir}/*.la
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/*.a
+%{_libdir}/lib*.a
