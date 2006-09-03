@@ -5,7 +5,7 @@ Version:	0.3.2
 Release:	1
 License:	BSD
 Group:		Libraries
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/ekhtml/%{name}-%{version}.tar.gz
 # Source0-md5:	cc9d2e4adaccacfacefddbd75ccccfdf
 URL:		http://ekhtml.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -20,7 +20,7 @@ ekhtml to szybki ale odpuszczaj±cy analizator HTML-a w stylu SAX.
 Summary:	Header files for ekhtml
 Summary(pl):	Pliki nag³ówkowe do ekhtml
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for ekhtml.
@@ -32,7 +32,7 @@ Pliki nag³ówkowe do ekhtml.
 Summary:	Static ekhtml library
 Summary(pl):	Biblioteka statyczna ekhtml
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static ekhtml library.
