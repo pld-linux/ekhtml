@@ -1,5 +1,5 @@
 Summary:	ekhtml - a speedy HTML parser
-Summary(pl.UTF-8):   ekhtml - szybki analizator HTML-a
+Summary(pl.UTF-8):	ekhtml - szybki analizator HTML-a
 Name:		ekhtml
 Version:	0.3.2
 Release:	1
@@ -18,7 +18,7 @@ ekhtml to szybki ale odpuszczający analizator HTML-a w stylu SAX.
 
 %package devel
 Summary:	Header files for ekhtml
-Summary(pl.UTF-8):   Pliki nagłówkowe do ekhtml
+Summary(pl.UTF-8):	Pliki nagłówkowe do ekhtml
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -30,7 +30,7 @@ Pliki nagłówkowe do ekhtml.
 
 %package static
 Summary:	Static ekhtml library
-Summary(pl.UTF-8):   Biblioteka statyczna ekhtml
+Summary(pl.UTF-8):	Biblioteka statyczna ekhtml
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
