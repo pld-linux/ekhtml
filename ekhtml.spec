@@ -8,6 +8,9 @@ Group:		Libraries
 Source0:	http://dl.sourceforge.net/ekhtml/%{name}-%{version}.tar.gz
 # Source0-md5:	cc9d2e4adaccacfacefddbd75ccccfdf
 URL:		http://ekhtml.sourceforge.net/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -44,6 +47,11 @@ Biblioteka statyczna ekhtml.
 %setup -q
 
 %build
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__autoheader}
+%{__automake}
 %configure
 %{__make} -j1
 
