@@ -2,10 +2,10 @@ Summary:	ekhtml - a speedy HTML parser
 Summary(pl.UTF-8):	ekhtml - szybki analizator HTML-a
 Name:		ekhtml
 Version:	0.3.2
-Release:	1
+Release:	2
 License:	BSD
 Group:		Libraries
-Source0:	http://dl.sourceforge.net/ekhtml/%{name}-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/ekhtml/%{name}-%{version}.tar.gz
 # Source0-md5:	cc9d2e4adaccacfacefddbd75ccccfdf
 URL:		http://ekhtml.sourceforge.net/
 BuildRequires:	autoconf
@@ -71,6 +71,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog README AUTHORS NEWS TODO
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
+%attr(755,root,root) %ghost %{_libdir}/lib*.so.0
 
 %files devel
 %defattr(644,root,root,755)
