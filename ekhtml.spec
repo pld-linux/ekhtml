@@ -2,7 +2,7 @@ Summary:	ekhtml - a speedy HTML parser
 Summary(pl.UTF-8):	ekhtml - szybki analizator HTML-a
 Name:		ekhtml
 Version:	0.3.2
-Release:	2
+Release:	3
 License:	BSD
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/ekhtml/%{name}-%{version}.tar.gz
